@@ -1,0 +1,321 @@
+/* STAR COMMENT
+ * This takes every object in the file and applies below.
+ * We do this so we can customize the margin, padding, and box-size
+ * as we please
+*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* DOUBLE COMMENT
+ * We can apply specific parameters to multiple categories as well,
+ * In this case, HTML and Body classes
+*/
+body{
+    overflow-x: hidden;
+}
+
+/*Hidden Comment ^^
+* Makes it so we can hide the panel/nav bar
+*/
+
+
+/* Root COMMENT
+ * This element is to create variables.
+*/
+:root{
+    --main-color: white;
+    --secondary-color: black;
+
+    --dark-blue: #080f5b;
+    --blue:#0D19A3;
+    --green:#15DB95;
+    --white: #F4E4C1;
+    --tan: #E4C580;
+;
+}
+
+
+/* @ COMMENT
+ * @ are rules in CSS
+ * its where you can create and use custom fonts.
+ * In this case, anytime we use "argonite" we use
+ * the font found in the src url
+
+@font-face{
+    font-family: "Noto";
+    src:url("./assetsYT/stone\ orgonite.woff");
+}
+*/
+
+
+
+/* Font Size Comment
+ * This changes h2 size settings.
+ * Line height increases the height between the words
+ * Padding increases the space between the entire h2 block. 
+ * 0 rem shows that I don't want want that on the left and right
+*/
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 125%;
+    padding: 1rem 0rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 125%;
+}
+
+/*                      TOP-BAR/NAV PORTION                     */
+
+/* Logo (and logo h1) Comment
+ * Display flex makes all logo titles to the side.
+ * Font-family param 1 shows what we want, but since its custom
+ * we include sans-serif as a backup.
+*/
+
+
+
+.logo{
+    display:flex;
+    position:fixed;
+    align-items: center;
+    top:5%;
+    left: 75px;
+}
+
+.logo h1{
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, .45);
+    color:var(--green);
+}
+
+.logo img {
+    width: 6rem;
+
+}
+
+.links {
+    display:flex;
+    position:fixed;
+    right:75px;
+    top:5%;
+}
+
+.links h1 {
+    padding-left: 25px;
+    cursor: pointer;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, .5);
+    color:var(--green);
+}
+
+section{
+    padding: 5% 5%;
+}
+
+
+
+/*                      FRONTPAGE PORTION                     */
+
+
+/* Class Tag comment
+ * min-height makes it so the params (background color in this case)
+ * doesn't clip halfway through our text, compared to using height param. 
+ *  Lets everything finish before Cutting off. 
+*/
+
+.frontPage{
+    
+    min-height: 100vh;
+    color:var(--main-color);
+    
+}
+
+.img-frontPage{
+    transform: skewY(-9deg);
+    translate:0% -100px;
+    
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+ 
+
+/* Text Shadow
+ * 1st param is displacement on x-axis, 2nd is ya-xis
+ * last is amount of blur
+*/
+.frontPage-text h2{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 25vh;
+    font-size: 6rem;
+    text-align: center;
+    color:whitesmoke;
+}
+
+.frontPage-text h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2.5vh;
+    font-size: 2rem;
+    text-align: center;
+    color:var(--green)
+    
+}
+
+.frontPage-content{
+    display:flex;
+    position:relative;
+}
+
+
+.frontPage-content img{
+    object-fit:cover;
+
+}
+
+/*                      EXPERIENCE/CAREER/SKILLS PORTION                     */
+
+.experience img{
+    
+
+    transform: skewY(9deg);
+    
+    position: absolute;
+    height: 1000px;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+/*                      PROJECTS PORTION                     */
+
+.projects{
+    color:var(--secondary-color);
+    text-align: center;
+}
+
+
+.projects-video video{
+    
+    border-radius: 1rem;
+    width:100%;
+    margin-top:1rem;
+}
+
+.projects-video h3{
+    position: absolute;
+    color: var(--main-color);
+    text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.315);
+    font-size:2rem;
+    transform: translate(-50%, -10%);
+    bottom:10%;
+    left:50%;
+}
+
+.yoga,.meditation,.pilates{
+    position:relative;
+}
+
+/*                      CONTACT ME PORTION                     */ 
+
+
+.about{
+    color:var(--secondary-color);
+}
+
+.about h2{
+    text-align:center;
+}
+
+.about p{
+    line-height: 150%;
+    font-size:1.2rem;
+}
+
+.about img {
+    width:100%;
+    margin-top:2rem;
+}
+
+
+/*DESKTOP FRIENDLY ADDITION*/
+
+@media screen and (min-width: 768px) {
+
+    .projects-video{
+        display:flex;
+        gap:2rem;
+    }
+
+    .about{
+        display:flex;
+        gap:5rem;
+        justify-content: space-between;
+    }
+
+    .about img{
+        width:50%;
+        border-radius:1rem;
+    }
+
+    .about h2{
+        text-align: start;
+    }
+
+    .about p{
+        text-align: start;
+    }
+
+}
+
+/*                     CODE GRAVEYARD                     
+
+
+Button Customization
+ * Border-radius introduces curve to button
+ * Boxshadow is same to text, just on buttons now
+
+
+.cta button{
+    padding:1rem;
+    font-size:1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.315);
+    margin: 1rem;
+    cursor: pointer;
+}
+
+Background Color
+ * color is the text color
+ * background color is the background color
+
+.cta-main {
+    background-color: var(--main-color);
+    color: var(--secondary-color)
+}
+
+.cta-main a {
+    text-decoration: none;
+    color:var(--secondary-color);
+}
+
+.cta-sec{
+    background-color: var(--secondary-color);
+    color:white;
+}
+
+.cta {
+    margin-top: 2rem;
+}
+*/

@@ -1,5 +1,57 @@
+
+
 .frontPage {
+    position:relative;
     margin-left:250px;
 }
 
-/* Rubik or Source Sans Pro for Typewriter/*
+/* Rubik or Source Sans Pro for Typewriter*/
+
+.frontPage .typewriter{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding:0.5rem;
+}
+
+.frontPage .typewriter h1{
+    font-size:3rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align:center;
+
+    
+
+    
+}
+
+.typewriter h1 .typed-text{
+    font-weight:normal;
+    color:#dd7732;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.typewriter h1 .cursor {
+    display: inline-block;
+    width:3px;
+    background-color: black;
+    margin-left: 0.1rem;
+    animation:blink 1s infinite;
+}
+
+.typewriter h1 .cursor.typing {
+    animation:none;
+}
+
+@keyframes blink{
+    0% {background-color: black;}
+
+    49% {background-color:black;}
+    50% {background-color: transparent;}
+
+    99% {background-color:transparent;}
+    100% {background-color: black;}
+}

@@ -35,6 +35,12 @@ body{
     padding: 40px 0px;
 }
 
+.wrapper .sidebar-content{
+    position:absolute;
+    top:50%;
+    transform: translate(0, -50%);
+}
+
 .wrapper .picture{
     display:block;
     margin: -185px auto;
@@ -56,9 +62,10 @@ body{
 
     padding: 10px 0px;
 }
-    
 
-.wrapper .sidebar h2{
+
+
+.wrapper .sidebar-content h2{
     color:var(--offWhite);
     text-align:center;
     margin-top: 40px;
@@ -72,14 +79,14 @@ body{
 
 
 
-.wrapper .sidebar ul li{
+.wrapper .sidebar-content ul li{
     padding:20px;
     border-bottom: 1px solid #bdb8d7;
     border-top: 1px solid rgba(225, 225, 225, 0.05);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar-content ul li a{
     color: #FAF9F6; /*CHANGE THIS TO BE A NICER DARKER-WHITE*/
     display:block;
 
@@ -89,26 +96,26 @@ body{
     text-transform: uppercase;
 }
 
-.wrapper .sidebar ul li a i{
+.wrapper .sidebar-content ul li a i{
     padding-right:10px;
 }
 
-.wrapper .sidebar ul li:hover{
+.wrapper .sidebar-content ul li:hover{
     background:#7256a5; /*CHANGE THIS TO BE A NICER LIGHTER-BAR COLOR*/
 }
 
-.wrapper .sidebar ul li:hover a{
+.wrapper .sidebar-content ul li:hover a{
     color:white;  /*CHANGE THIS TO BE A NICER DARKER-WHITE*/
 }
 
-.wrapper .sidebar .socials{
+.wrapper .sidebar-content .socials{
     margin-top:20px;
     position:absolute;
     padding-left: 37px;
     font-size:28px;
 }
 
-.wrapper .sidebar .socials a{
+.wrapper .sidebar-content .socials a{
     padding-left: 20px;
 
     color:white;

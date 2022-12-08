@@ -35,27 +35,32 @@ Flex:       Takes the entire width given to it and has multiple properties that 
 */
 
 .frontPage {
-
-    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    align-content:center;
+    overflow: hidden;
+    height:100vh;
     margin-left:250px;
+    margin-top:50px;
 }
 
 /* Rubik or Source Sans Pro for Typewriter*/
 
 .frontPage .typewriter{
-    height:25vh;
+    height:15vh;
     display:flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding:0.5rem;
+    align-items:center;
 }
 
 .frontPage .typewriter h1{
-    font-size:4rem;
+    font-size:3.5rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
-    text-align:center;
+
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .typewriter h1 .typed-text{
@@ -90,6 +95,39 @@ Flex:       Takes the entire width given to it and has multiple properties that 
 .header {
     display:flex;
     justify-content: center;
-    align-items: center;
-    font-size: 2rem;
+    align-items: flex-end;
+}
+
+.header p{
+    margin-right: 30vw;
+    font-size: 1.5rem;
+}
+
+.subheading {
+    display:flex;
+    align-items: flex-start;
+    justify-content:center;
+    padding-bottom: 50px;
+
+}
+
+.subheading p {
+    font-size:1rem;
+
+}
+
+.skills {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.skills p {
+    display:flex;
+    align-items: flex-start;
+    
+    height:200px;
+    width:250px;
+    padding-left: 15px;
+
 }

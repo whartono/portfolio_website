@@ -6,7 +6,7 @@ Also, delay values are in ms
 
 const typedTextSpan = document.querySelector('.typed-text')
 const cursorSpan = document.querySelector('.cursor');
-const twText = ['Software Engineer', 'Database Administrator', 'Freelance Web Developer', 'Student']
+const twText = ['Software Engineer', 'Database Administrator', 'FrontEnd Web Developer', '3D Animator'];
 const typingDelay = 200;
 const erasingDelay = 100;
 const nextStringDelay = 3000;

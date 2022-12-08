@@ -1,6 +1,41 @@
+/*
+Positioning CSS Stuff
+Static:     Just the default positioning
 
+Relative:   Positions the element in the requested way (top: 10px) from where 
+            it would normally be if statically positioned. Ignores other workflow elements. (takes out of document flow)
+            Often used in parent classes to create a 'container' so the other elements inside cannot go out of it
+            
+Absolute:   Position the element in the requested way (top: 10px) from the origin.
+            Origin can be changed if the parent container has a non-static position.
+            Ignores other workflow elements (takes out of document flow)
+
+Fixed:      Positions the element in the requested way from the origin.
+            Origin CANNOT be changed and will stay in the same spot even when scrolling
+            Used to make navigation bars
+            
+Sticky:     Positions the element similar to relative. However, upon scrolling past, it will
+            "catch" on to the top of the screen and will become fixed.
+            A mix of fixed and relative.
+
+Display CSS STuff
+
+BLock:      Takes up the entire width given to it and will force a newline above and below it.
+            Will not have anything next to it. Div uses this natively
+
+Inline:     Takes up only enough space to fit the content. CANNOT have height/width attributes. Span uses this natively
+
+Inlineblock:Takes up only enough space to fit the content, BUT can have height/width attributes, unlike inline
+            img uses this natively
+
+None:       Takes content out of the work flow
+
+Flex:       Takes the entire width given to it and has multiple properties that can be accessed using 
+            align-items and justify-content, flex-wrap, and align-content
+*/
 
 .frontPage {
+
     position:relative;
     margin-left:250px;
 }
@@ -8,7 +43,7 @@
 /* Rubik or Source Sans Pro for Typewriter*/
 
 .frontPage .typewriter{
-    height:100vh;
+    height:25vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -17,14 +52,10 @@
 }
 
 .frontPage .typewriter h1{
-    font-size:3rem;
+    font-size:4rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-align:center;
-
-    
-
-    
 }
 
 .typewriter h1 .typed-text{
@@ -54,4 +85,11 @@
 
     99% {background-color:transparent;}
     100% {background-color: black;}
+}
+
+.header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
 }

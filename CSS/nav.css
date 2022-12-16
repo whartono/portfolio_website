@@ -13,11 +13,41 @@
 
 :root {
     --offWhite:#FAF9F6;
+    --purpBack:#2a0f49;
 }
 
 body{
-    background:var(--offWhite)
+    background:var(--purpBack) /*used to be offwhite*/
 }
+
+/* BLOB BACKGROUND STUFF */
+
+.blobWrapper {
+    margin-left:250px;
+    background:#250821;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    
+}
+
+.blob {
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    top:-50px;
+    width:80vw;
+    
+}
+
+.blob:nth-child(2) {
+    filter:blur(50px);
+}
+
 
 /* NAVIGATION BAR STUFF */
 
@@ -33,6 +63,16 @@ body{
     height:100%;
     background:#4b4276; /*CHANGE THIS TO BE A NICER BAR COLOR*/
     padding: 40px 0px;
+}
+
+.wrapper .sidebarBlur {
+    position:fixed;
+    width:250px;
+    height:100%;
+    background:#4b4276; /*CHANGE THIS TO BE A NICER BAR COLOR*/
+    padding: 40px 0px;
+    z-index: -1;
+    filter:blur(100px);
 }
 
 .wrapper .sidebar-content{

@@ -61,19 +61,27 @@ body{
     position:fixed;
     width:250px;
     height:100%;
-    background:#4b4276; /*CHANGE THIS TO BE A NICER BAR COLOR*/
+    background:linear-gradient(to right, #4b4276, #4b4276, #3f3864, #2a0f49); /*CHANGE THIS TO BE A NICER BAR COLOR*/
     padding: 40px 0px;
 }
+
+/*
+
+Previously,. ^^^ didn't have a gradient. We'll see if we still like it with one. To revert (back to no gradient),
+Just change background to the #4b4276 color.
 
 .wrapper .sidebarBlur {
     position:fixed;
     width:250px;
     height:100%;
-    background:#4b4276; /*CHANGE THIS TO BE A NICER BAR COLOR*/
+    background:#4b4276; CHANGE THIS TO BE A NICER BAR COLOR
     padding: 40px 0px;
     z-index: -1;
     filter:blur(100px);
 }
+
+*/
+
 
 .wrapper .sidebar-content{
     position:absolute;
@@ -141,7 +149,7 @@ body{
 }
 
 .wrapper .sidebar-content ul li:hover{
-    background:#7256a5; /*CHANGE THIS TO BE A NICER LIGHTER-BAR COLOR*/
+    background-image:linear-gradient(to right, #7256a5,#7256a5, rgb(55, 42, 80)); /*CHANGE THIS TO BE A NICER LIGHTER-BAR COLOR*/
 }
 
 .wrapper .sidebar-content ul li:hover a{

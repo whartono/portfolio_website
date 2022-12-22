@@ -20,34 +20,6 @@ body{
     background:var(--purpBack) /*used to be offwhite*/
 }
 
-/* BLOB BACKGROUND STUFF */
-
-.blobWrapper {
-    margin-left:250px;
-    background:#250821;
-    position:relative;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-    
-}
-
-.blob {
-    position:absolute;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    top:-50px;
-    width:80vw;
-    
-}
-
-.blob:nth-child(2) {
-    filter:blur(50px);
-}
-
 
 /* NAVIGATION BAR STUFF */
 

@@ -50,6 +50,34 @@ Flex:       Takes the entire width given to it and has multiple properties that 
     color:var(--offWhite);
 }
 
+/* BLOB BACKGROUND STUFF */
+
+.blobWrapper {
+    margin-left:250px;
+    background:#250821;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    
+}
+
+.blob {
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    top:-50px;
+    width:80vw;
+    
+}
+
+.blob:nth-child(2) {
+    filter:blur(50px);
+}
+
 /* Rubik or Source Sans Pro for Typewriter*/
 
 .frontPage .typewriter{
